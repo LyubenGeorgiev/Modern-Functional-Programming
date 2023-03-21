@@ -18,7 +18,7 @@ insertat x (y:ys) = (x:y:rest) : (map (y:) whole)
 perms :: [a] -> [[a]]
 perms [] = []
 perms [a] = [[a]]
-perms (x:xs) = concat $ map (insertat x) (perms xs)
+perms (x:xs) = concat $ map (insertat x) $ perms xs
  
 -- Task 4
 -- Given a list return list of lists representing every subset of the original list
